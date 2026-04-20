@@ -1,0 +1,324 @@
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+@font-face {
+    font-family: 'Font_header';
+    src: url('./fonts/PlaywriteIE-VariableFont_wght.ttf') format('truetype');
+}
+
+
+header{
+    background-color: #5fbed6;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 40px;
+    margin-top: 0px;
+}
+
+.header #title_header{
+font-family: 'Font_header', sans-serif;
+text-align:center;
+
+} 
+
+.header #brasil{
+font-family: Arial, Helvetica, sans-serif;
+text-align:center;
+} 
+
+
+
+body{
+
+font-family:Arial;
+background:#d5d4d4;
+padding:0px; 
+
+}
+
+.ano{
+
+display:grid;
+grid-template-columns: repeat(3,1fr);
+gap:30px;
+max-width:1200px;
+margin:auto;
+
+}
+
+.mes{
+
+background:white;
+
+
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+.mes h2{
+background-color: #5fbed6;
+text-align:center;
+margin-bottom:0px;
+
+}
+
+.calendar{
+
+width:100%;
+border-collapse:collapse;
+
+}
+
+.calendar th,
+.calendar td{
+border:1px solid #000000;
+width:14%;
+height:35px;
+text-align:center;
+}
+
+.week-days{
+
+background:#c5c7c8;
+
+}
+
+.empty{
+
+background:#f5f5f5;
+
+}
+
+/* deixa o card clicável sem mudar visual */
+.link-mes {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* FUNDO ESCURO + BLUR */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+  display: none;
+  z-index: 1000;
+}
+
+/* quando clicar */
+.modal:target {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* caixa do modal */
+.modal-content {
+    background: transparent; /* Fundo transparente para ver os cards separados */
+    width: 90%;
+    max-width: 1100px;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none; /* Remove a sombra da caixa pai */
+    position: relative;
+}
+
+/* botão fechar */
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px; /* 🔥 ESSENCIAL */
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    z-index: 2000;
+}
+
+.titulo {
+    color: black;
+    text-align: center;
+    background-color: #5fbed6;
+}
+
+/* layout interno */
+.modal-body {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* calendário maior */
+.calendario-modal {
+    flex: 2;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* lateral */
+.lateral {
+    flex: 1;
+    height: 295px;
+    min-width: 280px;
+    background: white; /* Agora a lateral também é branca e sólida */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.card-lateral {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.lateral h3{
+    margin-top: 10px;
+}
+
+.lateral ul li{
+    padding-bottom: 2px;
+    margin-top: 10px;
+}
+
+/* textarea */
+textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
+}
+
+.calendar input {
+  display: none;
+}
+.modal-body input {
+  display: none;
+}
+
+.calendar label {
+  display: block;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.calendar input:checked + label {
+  background-color: #5fbed6;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.modal-body:has(#jan-dia1:checked) .f1 {
+  color: red;
+}
+.modal-body:has(#jan-dia25:checked) .f25 {
+  color: red;
+}
+
+.modal-body:has(#fev-carnaval16:checked) .f16,
+.modal-body:has(#fev-carnaval17:checked) .f17 {
+  color: red;
+}
+
+.modal-body:has(#mar-dia8:checked) .f8 {
+  color: red;
+}
+
+.modal-body:has(#abr-dia3:checked) .f3,
+.modal-body:has(#abr-dia21:checked) .f21 {
+  color: red;
+}
+
+.modal-body:has(#mai-dia1:checked) .f1 {
+  color: red;
+}
+.modal-body:has(#mai-dia10:checked) .f10 {
+  color: red;
+}
+
+
+.modal-body:has(#jun-dia4:checked) .f4 {
+  color: red;
+}
+
+.modal-body:has(#jun-dia12:checked) .f12 {
+  color: red;
+}
+
+.modal-body:has(#jul-dia9:checked) .f9 {
+  color: red;
+}
+
+.modal-body:has(#jul-dia25:checked) .f25 {
+  color: red;
+}
+
+.modal-body:has(#ago-dia9:checked) .f9 {
+  color: red;
+}
+
+.modal-body:has(#ago-dia11:checked) .f11 {
+  color: red;
+}
+
+.modal-body:has(#ago-dia9:checked) .f9 {
+  color: red;
+}
+
+.modal-body:has(#set-dia7:checked) .f7 {
+  color: red;
+}
+
+.modal-body:has(#out-dia12:checked) .f12 {
+  color: red;
+}
+
+.modal-body:has(#out-dia15:checked) .f15 {
+  color: red;
+}
+
+.modal-body:has(#out-dia28:checked) .f28 {
+  color: red;
+}
+
+.modal-body:has(#nov-dia2:checked) .f2,
+.modal-body:has(#nov-dia20:checked) .f20,
+.modal-body:has(#nov-dia15:checked) .f15 {
+  color: red;
+}
+
+.modal-body:has(#dez-dia25:checked) .f25,
+.modal-body:has(#dez-dia31:checked) .f31 {
+  color: red;
+}
+
+.nav-tabs {
+    background-color: #5fbed6;
+    /* border-bottom: none; remove a linha padrão do bootstrap */
+    margin-bottom: 0;
+}
+.nav-tabs .nav-link {
+    color: black;
+    font-weight: bold;
+    margin-top: 0px;
+
+}
+.nav-tabs .nav-link.active {
+    background-color: #5fbed6;
+    color: black;
+    border: none;
+}
