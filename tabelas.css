@@ -1,0 +1,44 @@
+.nav-tabs {
+    background-color: #5fbed6;
+    margin-bottom: 0;
+}
+
+.nav-tabs .nav-link {
+    color: black;
+    font-weight: bold;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #5fbed6;
+    color: black;
+    border: none;
+}
+
+.titulo-tabela {
+    margin-top: 2px;
+}
+
+.minha-tabela {
+    background-color: aliceblue;
+    margin-top: 10px !important;
+}
+
+.titulo{
+    background-color: transparent;
+    margin-bottom: 25px;
+}
+.table-livros{
+    padding: 20px 80px 30px 80px;
+    text-align: center;
+}
+
+.table-externa{
+    padding: 20px 80px 30px 80px;
+    text-align: center;
+}
+
+
+.table-striped {
+    --bs-table-striped-bg: #aad0da;
+    --bs-table-bg: aliceblue;
+}

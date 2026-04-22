@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário - Tabelas</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Seu CSS -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="tabelas.css">
+</head>
+
+<body>
+
+
+<!-- NAVEGAÇÃO -->
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" href="index.html">Site</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="tabelas.html">Tabelas dinâmicas</a>
+  </li>
+  <!-- <li class="nav-item">
+    <a class="nav-link" href="carrosel.html">Carrosel</a>
+  </li> -->
+</ul>
+
+<!-- HEADER -->
+<header class="header">
+    <h1 id="title_header">Calendário 2026</h1>
+    <h1 id="brasil">BRASIL</h1>
+</header>
+
+<!-- CONTEÚDO -->
+<div class="container mt-4">
+
+    <h2 class="mb-4 text-center titulo-tabela">Feriados Nacionais - 2026</h2>
+
+    <table class="table text-center table-striped minha-tabela">
+        <thead class="table-dark">
+            <tr>
+                <th>Data</th>
+                <th>Dia da Semana</th>
+                <th>Feriado</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-feriados">
+            <tr>
+                <td>01/01/2026</td>
+                <td>Quinta-feira</td>
+                <td>Confraternização Universal</td>
+            </tr>
+            <tr>
+                <td>03/04/2026</td>
+                <td>Sexta-feira</td>
+                <td>Paixão de Cristo (Sexta-feira Santa)</td>
+            </tr>
+            <tr>
+                <td>21/04/2026</td>
+                <td>Terça-feira</td>
+                <td>Tiradentes</td>
+            </tr>
+            <tr>
+                <td>01/05/2026</td>
+                <td>Sexta-feira</td>
+                <td>Dia Mundial do Trabalho</td>
+            </tr>
+            <tr>
+                <td>04/06/2026</td>
+                <td>Quinta-feira</td>
+                <td>Corpus Christi (Ponto Facultativo)</td>
+            </tr>
+            <tr>
+                <td>07/09/2026</td>
+                <td>Segunda-feira</td>
+                <td>Independência do Brasil</td>
+            </tr>
+            <tr>
+                <td>12/10/2026</td>
+                <td>Segunda-feira</td>
+                <td>Nossa Senhora Aparecida</td>
+            </tr>
+            <tr>
+                <td>02/11/2026</td>
+                <td>Segunda-feira</td>
+                <td>Finados</td>
+            </tr>
+            <tr>
+                <td>15/11/2026</td>
+                <td>Domingo</td>
+                <td>Proclamação da República</td>
+            </tr>
+            <tr>
+                <td>20/11/2026</td>
+                <td>Sexta-feira</td>
+                <td>Dia da Consciência Negra</td>
+            </tr>
+            <tr>
+                <td>25/12/2026</td>
+                <td>Sexta-feira</td>
+                <td>Natal</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<div class="table-livros">
+    <h2 class="titulo">Tabela Livros</h2>
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Autor</th>
+            </tr>
+        </thead>
+        <tbody id="tbody-livros"></tbody>
+    </table>
+</div>
+
+<div class="table-externa">
+    <h2 class="titulo">Tabela Externa</h2>
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Emoji</th>
+                <th>Título</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody id="tbody-externa"></tbody>
+    </table>
+</div>
+<script src="./js/script.js"></script>
+</body>
+</html>
